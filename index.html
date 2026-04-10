@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDW - Clever's Development World</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+/* BODY */
+body{
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg,#020617,#0f172a);
+color:#fff;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 40px;
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:#22c55e;
+}
+
+nav a{
+color:#fff;
+margin-left:20px;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:100px 20px;
+background: radial-gradient(circle at top,#6366f1,#020617);
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero span{
+color:#22c55e;
+}
+
+.hero p{
+margin-top:15px;
+font-size:1.2rem;
+opacity:0.9;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:#22c55e;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTION */
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2rem;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* PRICE */
+.price{
+color:#22c55e;
+font-size:1.5rem;
+margin:10px 0;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+background:#020617;
+padding:20px;
+border-left:4px solid #22c55e;
+border-radius:8px;
+}
+
+/* STATS */
+.stats{
+display:flex;
+justify-content:space-around;
+text-align:center;
+flex-wrap:wrap;
+}
+
+.stats div{
+margin:20px;
+}
+
+.stats h3{
+font-size:2rem;
+color:#22c55e;
+}
+
+/* FAQ */
+.faq{
+margin-bottom:15px;
+cursor:pointer;
+background:#1e293b;
+padding:15px;
+border-radius:8px;
+}
+
+/* CTA */
+.cta{
+text-align:center;
+}
+
+/* FLOAT BUTTON */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#22c55e;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+color:white;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+/* ANIMATION */
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:0.6s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>CDW</h2>
+<div>
+<a href="#packages">Packages</a>
+<a href="#faq">FAQ</a>
+<a href="#join">Join</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Become a <span>Job-Ready Developer</span> in 8 Weeks</h1>
+<p>Learn Fullstack Web Development + AI with 1-on-1 mentorship in Lagos</p>
+<a href="payment.html" class="btn">Start Now</a>
+</section>
+
+<section class="stats fade">
+<div><h3 id="students">0</h3><p>Students Trained</p></div>
+<div><h3 id="projects">0</h3><p>Projects Built</p></div>
+<div><h3 id="success">0</h3><p>Success Rate %</p></div>
+</section>
+
+<section class="fade">
+<h2>🚀 What You Get</h2>
+<div class="grid">
+<div class="card">Build real-world apps</div>
+<div class="card">Use AI like a pro developer</div>
+<div class="card">Portfolio that gets jobs</div>
+<div class="card">Freelancing roadmap</div>
+</div>
+</section>
+
+<section id="packages" class="fade">
+<h2>💼 Packages</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Starter</h3>
+<p class="price">₦15k</p>
+<p>Frontend + Basic AI + 1 Project</p>
+</div>
+
+</div>
+</section>
+
+<section class="fade">
+<h2>📈 Results</h2>
+<div class="testimonial">“I went from zero to building websites in weeks.”</div><br>
+<div class="testimonial">“Now I get paid gigs thanks to this training.”</div>
+</section>
+
+<section id="faq" class="fade">
+<h2>❓ FAQ</h2>
+
+<div class="faq">Do I need experience? ➜ No, you start from zero</div>
+<div class="faq">Is it online? ➜ Yes + flexible</div>
+<div class="faq">Will I earn after? ➜ Yes if you follow the system</div>
+
+</section>
+
+<section id="join" class="cta fade">
+<h2>⚡ Only 5 Slots Available</h2>
+<p>Send “WEB” now for more inquiries.</p>
+<a href="https://wa.me/2348148952255" class="btn">Chat</a>
+</section>
+
+<a href="https://wa.me/2348148952255" class="whatsapp">💬</a>
+
+<a href="https://www.tiktok.com/@cleverdevelopmentworld?_r=1&_t=ZS-955aqo44A8S" class="tiktok" style="text-align:center">👻</a>
+
+<footer>
+<p>© 2026 Clever's Development World (CDW)</p>
+</footer>
+
+<script>
+
+/* SCROLL ANIMATION */
+const fades=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+fades.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
+
+/* COUNTER */
+function animate(id,end){
+let i=0;
+let int=setInterval(()=>{
+i++;
+document.getElementById(id).innerText=i;
+if(i>=end) clearInterval(int);
+},20);
+}
+
+animate("students",50);
+animate("projects",120);
+animate("success",90);
+
+/* URGENCY POPUP */
+setTimeout(()=>{
+alert("⚡ Only 2 slots left this month!");
+},4000);
+
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"6d607865f5604ae995550459025f6459","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
