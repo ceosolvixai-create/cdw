@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Payment - CDW</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body{
+background: linear-gradient(135deg,#020617,#0f172a);
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+body::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:#22c55e;
+filter:blur(150px);
+opacity:0.2;
+top:10%;
+left:20%;
+}
+
+/* CONTAINER */
+.container{
+width:90%;
+max-width:500px;
+background: rgba(255,255,255,0.05);
+border-radius:20px;
+padding:35px;
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 0 40px rgba(0,0,0,0.5);
+animation:fadeIn 1s ease;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* TITLE */
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+opacity:0.8;
+margin-bottom:25px;
+}
+
+/* FORM */
+form{
+margin-bottom:25px;
+}
+
+.input-group{
+margin-bottom:15px;
+}
+
+input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#020617;
+color:#fff;
+outline:none;
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+input:focus{
+border-color:#22c55e;
+box-shadow:0 0 10px #22c55e;
+}
+
+/* PAYMENT BOX */
+.payment-box{
+background:#020617;
+padding:20px;
+border-radius:15px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.payment-box:hover{
+transform:scale(1.02);
+}
+
+/* ACCOUNT */
+.account{
+font-size:1.5rem;
+color:#22c55e;
+margin:10px 0;
+letter-spacing:2px;
+}
+
+/* BUTTONS */
+.btn{
+display:block;
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:25px;
+background:#22c55e;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECONDARY */
+.btn-secondary{
+background:transparent;
+border:1px solid #22c55e;
+color:#22c55e;
+}
+
+/* BACK */
+.back{
+display:block;
+text-align:center;
+margin-top:15px;
+color:#aaa;
+text-decoration:none;
+}
+
+/* SUCCESS MESSAGE */
+.success{
+display:none;
+margin-top:15px;
+text-align:center;
+color:#22c55e;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💳 Secure Payment</h1>
+<p class="subtitle">Fill your details & complete your registration</p>
+
+<!-- FORM -->
+<form id="userForm">
+<div class="input-group">
+<input type="text" placeholder="Full Name" required>
+</div>
+
+<div class="input-group">
+<input type="email" placeholder="Email Address" required>
+</div>
+
+<div class="input-group">
+<input type="tel" placeholder="Phone Number" required>
+</div>
+</form>
+
+<!-- PAYMENT DETAILS -->
+<div class="payment-box">
+<p><strong>Bank:</strong> Paga</p>
+<p><strong>Account Name:</strong> Cruise (Acctwave)</p><br><br>
+<p class="account" id="accNumber">1136120415</p>
+
+<button class="btn" onclick="copyAccount()">Copy Account Number</button><br><br>
+
+<p><bold>‼️Registration will be open automatically after payment has been confirmed.</bold></p>
+
+<a href="index.html" class="back">← Go Back</a>
+
+</div>
+
+<script>
+
+/* COPY ACCOUNT */
+function copyAccount(){
+const acc = document.getElementById("accNumber").innerText;
+navigator.clipboard.writeText(acc);
+alert("Account number copied!");
+}
+
+/* CONFIRM PAYMENT */
+function confirmPayment(){
+const form = document.getElementById("userForm");
+
+if(form.checkValidity()){
+document.getElementById("successMsg").style.display="block";
+
+/* REDIRECT TO WHATSAPP */
+setTimeout(()=>{
+window.location.href="https://wa.me/2348148952255?text=Hello%20I%20just%20made%20payment%20for%20CDW%20training";
+},2000);
+
+}else{
+alert("Please fill all details first!");
+}
+}
+
+</script>
+
+</body>
+</html>
